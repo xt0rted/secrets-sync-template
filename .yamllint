@@ -1,0 +1,24 @@
+extends: default
+
+rules:
+  document-start:
+    present: true
+    ignore: |
+      *.*
+      !secrets-sync.yaml
+  key-ordering:
+    ignore: |
+      *.*
+      !secrets-sync.yaml
+  line-length: disable
+  quoted-strings:
+    quote-type: double
+    required: only-when-needed
+    extra-allowed:
+      - ^\${{
+    ignore: |
+      *.*
+      !.github/workflows
+  truthy:
+    check-keys: false
+    level: error
