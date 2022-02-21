@@ -1,3 +1,5 @@
+name: Validate YAML
+
 on:
   pull_request_target:
   push:
